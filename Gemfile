@@ -24,11 +24,15 @@ gem 'jquery-rails'
 
 gem 'mongoid'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'mongoid_userstamp'
 
 gem 'devise'
 gem 'rails_admin'
 
-gem 'friendly_id'
+#gem 'friendly_id'
+#gem 'stringex'
+#gem 'slugoid'
+gem 'mongoid_slug'
 
 # Later
 #gem 'omniauth'
