@@ -28,6 +28,7 @@ gem 'mongoid_userstamp'
 
 gem 'devise'
 gem 'rails_admin'
+gem 'rich'
 
 #gem 'friendly_id'
 #gem 'stringex'

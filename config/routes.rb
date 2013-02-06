@@ -1,5 +1,7 @@
 CseppCsk::Application.routes.draw do
   
+  mount Rich::Engine => '/rich', :as => 'rich'
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
