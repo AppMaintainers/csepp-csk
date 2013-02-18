@@ -12,6 +12,9 @@ class Page
   field :title, :type => String
   field :body, :type => String, :default => ""
   slug :title, history: true
+
+  validates :title, presence: true
+  validates :body, presence: true
     
   field :published, type: Boolean, :default => true
 
