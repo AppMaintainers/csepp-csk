@@ -23,7 +23,7 @@ RailsAdmin.config do |config|
   # Display empty fields in show views:
   # config.compact_show_view = false
 
-  # Number of default rows per-page:
+  # Number of default rows per-pages:
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):

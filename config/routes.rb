@@ -1,11 +1,5 @@
 CseppCsk::Application.routes.draw do
 
-  namespace :public do
-    resources :page, only: [:index, :show]
-    #get "page/index"
-    #get "page/show"
-  end
-
   mount Rich::Engine => '/rich', :as => 'rich'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -18,4 +12,9 @@ CseppCsk::Application.routes.draw do
   end
 
   #root :to => "home#index"
+
+  match ":title" => "pages#show"
+
+  root :to => "pages#show"
+
 end

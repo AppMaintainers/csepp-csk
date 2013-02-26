@@ -1,4 +1,4 @@
-class Blog < Page
+class Blog < Content
 
   rails_admin do
     list do

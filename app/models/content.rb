@@ -1,4 +1,4 @@
-class Page < Content
+class Content
   include Mongoid::Document
   include Mongoid::Slug
   include Mongoid::Userstamp
@@ -6,16 +6,16 @@ class Page < Content
 
   has_mongoid_attached_file :pictures
   has_mongoid_attached_file :documents
-  
+
   belongs_to :user
-  
+
   field :title, :type => String
   field :body, :type => String, :default => ""
   slug :title, history: true
 
   validates :title, presence: true
   validates :body, presence: true
-    
+
   field :published, type: Boolean, :default => true
 
   rails_admin do
@@ -39,4 +39,6 @@ class Page < Content
       field :documents
     end
   end
+
+
 end
