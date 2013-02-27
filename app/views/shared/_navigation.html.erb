@@ -1,7 +1,5 @@
 <ul>
-  <% if !@navigation.nil? %>
-    <% @navigation.each do | item | %>
-      <li><%= link_to(get_title(item), item) %></li>
-    <% end %>
+  <% @navigation_items.each do | item | %>
+      <li><%= link_to(item[:name], item[:url]) %></li>
   <% end %>
 </ul>

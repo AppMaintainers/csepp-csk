@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :navigation
 
   def show
-    @page = Page.where(_slugs: params[:title]).to_a
+    @page = params[:title].blank? ? Page.first : Page.find(params[:title])
   end
 
 end

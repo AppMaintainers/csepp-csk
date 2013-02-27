@@ -1,3 +1,5 @@
-<% if !@page.blank? %>
-  <%=raw @page[0].body %>
+<h2><%= @page.title %></h2>
+<%= raw @page.body %>
+<% @page.attached_pictures.each do |pic| %>
+    <%= image_tag pic.pictures.url  %>
 <% end %>

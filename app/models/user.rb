@@ -7,8 +7,8 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many :pages
-  has_many :blogs
+  #has_many :pages
+  #has_many :blogs
 
   field :name, :type => String
   ## Database authenticatable
