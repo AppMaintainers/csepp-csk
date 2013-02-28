@@ -1,5 +1,10 @@
 <h2><%= @page.title %></h2>
 <%= raw @page.body %>
-<% @page.attached_pictures.each do |pic| %>
-    <%= image_tag pic.pictures.url  %>
+<div id="gallery">
+  <% @page.attached_pictures.each do |pic| %>
+      <%= link_to image_tag(pic.pictures.url(:thumb)), pic.pictures.url  %>
+  <% end %>
+</div>
+<% @page.attached_documents.each do |doc| %>
+    <%= link_to doc.documents_file_name, doc.documents.url  %>
 <% end %>

@@ -7,7 +7,7 @@ class AttachedPicture
   belongs_to :page
   belongs_to :blog
 
-  has_mongoid_attached_file :pictures
+  has_mongoid_attached_file :pictures, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   rails_admin do
     list do
