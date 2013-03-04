@@ -29,6 +29,7 @@ gem 'mongoid_userstamp'
 gem 'devise'
 gem 'rails_admin'
 gem 'rich'
+gem 'mongoid-tree', :require => 'mongoid/tree'
 
 #gem 'friendly_id'
 #gem 'stringex'

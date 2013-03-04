@@ -3,6 +3,8 @@ class Content
   include Mongoid::Slug
   include Mongoid::Userstamp
 
+  has_one :menu
+
   field :title, :type => String
   field :body, :type => String, :default => ""
   slug :title, history: true

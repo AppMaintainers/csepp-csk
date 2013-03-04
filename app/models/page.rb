@@ -25,6 +25,7 @@ class Page < Content
     edit do
       field :title
       field :body, :rich_editor
+      #field :position
       #field :user do
       #  default_value do
       #    bindings[:view]._current_user.id
@@ -33,7 +34,7 @@ class Page < Content
       #field :published
       field :attached_documents
       field :attached_pictures
-      field :_slugs
+      #field :_slugs
       #field :pictures
       #field :documents
     end

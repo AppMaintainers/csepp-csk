@@ -1,0 +1,4 @@
+<% @blogs.each do |blog| %>
+    <h2><%= link_to blog.title, blog.menu.url %></h2>
+    <%= raw blog.body %>
+<% end %>

@@ -10,6 +10,7 @@ class AttachedDocument
   has_mongoid_attached_file :documents
 
   rails_admin do
+    visible false
     list do
     end
     edit do

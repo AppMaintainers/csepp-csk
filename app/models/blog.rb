@@ -23,7 +23,7 @@ class Blog < Content
       #field :published
       field :attached_documents
       field :attached_pictures
-      field :_slugs
+      #field :_slugs
       #field :pictures
       #field :documents
     end

@@ -143,6 +143,8 @@ GEM
       tzinfo (~> 0.3.22)
     mongoid-paperclip (0.0.8)
       paperclip (>= 2.3.6)
+    mongoid-tree (1.0.1)
+      mongoid (>= 3.0, <= 4.0)
     mongoid_slug (2.0.1)
       mongoid (~> 3.0)
       stringex (~> 1.4)
@@ -282,6 +284,7 @@ DEPENDENCIES
   meta_request
   mongoid
   mongoid-paperclip
+  mongoid-tree
   mongoid_slug
   mongoid_userstamp
   rails

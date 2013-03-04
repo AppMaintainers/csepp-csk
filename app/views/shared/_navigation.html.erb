@@ -1,5 +1,18 @@
 <ul>
-  <% @navigation_items.each do | item | %>
+  <% @top_page_items.each do | item | %>
       <li><%= link_to(item[:name], item[:url]) %></li>
+      <% unless item.children.empty? %>
+          <ul>
+            <% item.children.each do |sub_item| %>
+                <li><%= link_to(sub_item[:name], sub_item[:url]) %></li>
+            <% end %>
+          </ul>
+      <% end %>
+  <% end %>
+  <% @other_links.each do |item| %>
+      <li><%= link_to(item[:name], item[:url]) %></li>
+  <% end %>
+  <% unless @blog.nil? %>
+    <li><%= link_to(@blog[:name], @blog[:url]) %></li>
   <% end %>
 </ul>

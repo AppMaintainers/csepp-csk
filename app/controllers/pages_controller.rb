@@ -2,7 +2,11 @@ class PagesController < ApplicationController
   before_filter :navigation
 
   def show
-    @page = params[:title].blank? ? Page.first : Page.find(params[:title])
+    @content = params[:title].blank? ? Page.first : Content.find(params[:title])
+  end
+
+  def index
+    @blogs = Blog.all.to_a
   end
 
 end

@@ -10,6 +10,7 @@ class AttachedPicture
   has_mongoid_attached_file :pictures, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   rails_admin do
+    visible false
     list do
     end
     edit do

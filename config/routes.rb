@@ -13,6 +13,7 @@ CseppCsk::Application.routes.draw do
 
   #root :to => "home#index"
 
+  match "blogs" => "pages#index"
   match ":title" => "pages#show"
 
   root :to => "pages#show"
