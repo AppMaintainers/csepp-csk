@@ -5,7 +5,7 @@ class AttachedDocument
 
   #embedded_in :content, inverse_of: attached_files
   belongs_to :page
-  belongs_to :blog
+  belongs_to :blog_post
 
   has_mongoid_attached_file :documents
 

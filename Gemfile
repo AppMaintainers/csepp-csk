@@ -4,7 +4,8 @@ gem 'rails'
 gem 'bcrypt-ruby'
 gem 'bootstrap-sass'
 gem 'faker'
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate_mongoid'
 gem 'bootstrap-will_paginate'
 
 group :assets do

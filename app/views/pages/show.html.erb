@@ -1,10 +1,13 @@
-<h2><%= @content.title %></h2>
-<%= raw @content.body %>
-<div id="gallery">
-  <% @content.attached_pictures.each do |pic| %>
-      <%= link_to image_tag(pic.pictures.url(:thumb)), pic.pictures.url  %>
-  <% end %>
-</div>
-<% @content.attached_documents.each do |doc| %>
-    <%= link_to doc.documents_file_name, doc.documents.url  %>
+<% unless @content.blank? %>
+    <h2><%= @content.title %></h2>
+    <%= raw @content.body %>
+    <i><%= @content.updated_at %></i>
+    <div id="gallery">
+      <% @content.attached_pictures.each do |pic| %>
+          <%= link_to image_tag(pic.pictures.url(:thumb)), pic.pictures.url  %>
+      <% end %>
+    </div>
+    <% @content.attached_documents.each do |doc| %>
+        <%= link_to doc.documents_file_name, doc.documents.url  %>
+    <% end %>
 <% end %>

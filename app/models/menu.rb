@@ -21,8 +21,8 @@ class Menu
   before_save :set_name_and_url
 
   def set_name_and_url
-    self.name = content.title if name.empty?
-    self.url = Rails.application.routes.url_helpers.root_url + content.slug if url.empty?
+    self.name = content.title if name.blank?
+    self.url = Rails.application.routes.url_helpers.root_url + content.slug if url.blank?
   end
 
   def self.belongs_to_page
@@ -34,7 +34,7 @@ class Menu
   end
 
   def self.has_blog?
-    self.all.to_a.any?{ |menu| !menu.content.nil? && menu.content._type == "Blog"}
+    self.all.to_a.any?{ |menu| !menu.content.nil? && menu.content._type == "BlogPost"}
   end
 
   rails_admin do

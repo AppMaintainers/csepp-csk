@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def index
-    @blogs = Blog.all.to_a
+    @blogposts = BlogPost.paginate(:page => params[:page], :per_page => 5)
   end
 
 end

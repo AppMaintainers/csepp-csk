@@ -1,4 +1,9 @@
-<% @blogs.each do |blog| %>
-    <h2><%= link_to blog.title, blog.menu.url %></h2>
-    <%= raw blog.body %>
+<%= link_to "RSS Feed", blogposts_url(:rss) %>
+
+<% @blogposts.each do |blogpost| %>
+    <h2><%= link_to blogpost.title, blogpost.menu.url %></h2>
+    <%= raw blogpost.body %>
+    <i><%= blogpost.updated_at %></i>
 <% end %>
+
+<%= will_paginate @blogposts %>
