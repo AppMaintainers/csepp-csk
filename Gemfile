@@ -1,17 +1,29 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails'
+
+gem 'mongoid'
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'mongoid_userstamp'
+gem 'mongoid_slug'
+
+gem 'devise'
+gem 'rails_admin'
+gem 'rich'
+gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'bcrypt-ruby'
-gem 'bootstrap-sass'
-gem 'faker'
-gem 'will_paginate', '~> 3.0.0'
+
+gem 'will_paginate'
 gem 'will_paginate_mongoid'
 gem 'bootstrap-will_paginate'
 
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :development do
@@ -21,36 +33,14 @@ group :development do
   gem 'meta_request'
 end
 
-gem 'jquery-rails'
-
-gem 'mongoid'
-gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'mongoid_userstamp'
-
-gem 'devise'
-gem 'rails_admin'
-gem 'rich'
-gem 'mongoid-tree', :require => 'mongoid/tree'
-
-#gem 'friendly_id'
-#gem 'stringex'
-#gem 'slugoid'
-gem 'mongoid_slug'
-
-# Later
-#gem 'omniauth'
-#gem 'omniauth-facebook'
-#gem 'omniauth-google-oauth2'
-
-# Test gems on Macintosh OS X
-group :test do
-  gem 'capybara', '1.1.2'
-  gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl', '1.0.3'
-  gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '1.2.0'
-  gem 'spork', '0.9.2'
-  gem 'factory_girl_rails', '4.1.0'
-  gem 'cucumber-rails', '1.2.1', :require => false
-  gem 'database_cleaner', '0.7.0'
-end
+#group :test do
+#  gem 'capybara'
+#  gem 'rb-fsevent', :require => false
+#  gem 'growl'
+#  gem 'guard-rspec'
+#  gem 'guard-spork'
+#  gem 'spork'
+#  gem 'factory_girl_rails'
+#  gem 'cucumber-rails', :require => false
+#  gem 'database_cleaner'
+#end

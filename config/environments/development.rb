@@ -15,7 +15,7 @@ CseppCsk::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3001' }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -31,5 +31,5 @@ CseppCsk::Application.configure do
   config.assets.debug = true
 
   # Setting default url for url composing in models
-  routes.default_url_options[:host] = 'localhost:3000'
+  routes.default_url_options[:host] = 'localhost:3001'
 end

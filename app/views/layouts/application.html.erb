@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CseppCsk</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title><%= SITE[:title] %></title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if current_user %>
     <div id="navigation">
         <%= render partial: "shared/navigation" %>
     </div>
-  <% end %>
 
-  <%= yield %>
+    <div class="container">
+        <%= yield %>
+    </div>
 
+    <%= javascript_include_tag "application" %>
 </body>
 </html>

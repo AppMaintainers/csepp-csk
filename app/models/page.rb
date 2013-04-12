@@ -5,16 +5,6 @@ class Page < Content
   accepts_nested_attributes_for :attached_pictures
   accepts_nested_attributes_for :attached_documents
 
-  #has_many :attached_files
-  #field :title, :type => String
-  #field :body, :type => String, :default => ""
-  #slug :title, history: true
-  #
-  #validates :title, presence: true
-  #validates :body, presence: true
-  #
-  #field :published, type: Boolean, :default => true
-
   rails_admin do
     list do
       field :title

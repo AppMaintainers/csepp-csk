@@ -22,7 +22,7 @@ class Menu
 
   def set_name_and_url
     self.name = content.title if name.blank?
-    self.url = Rails.application.routes.url_helpers.root_url + content.slug if url.blank?
+    self.url = content.slug if url.blank?
   end
 
   def self.belongs_to_page
