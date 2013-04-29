@@ -9,3 +9,5 @@ Hibak:
 - ruby hash egysegesen
 - <% unless @content.blank? %> ez mit vizsgal?
 - attachment image is not plural
+- gem 'quiet_assets'
+

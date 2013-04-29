@@ -2,15 +2,25 @@
 
 .container{
   background: #ffffff;
+  padding: 2em;
+
 
   .site-header{
-    padding: 2em;
+    padding-top: 8em;
+    height: 140px;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+
     h2{
-      font-size: 1em;
-      line-height: 0;
+      font-size: 1.3em;
+      line-height: .5em;
     }
   }
   .content{
+    h2:first-child{
+      margin-top: 0;
+    }
   }
   .wyswyg-content{
     text-align: justify;

@@ -4,6 +4,17 @@
   <title><%= SITE[:title] %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <style>
+    body{
+        background: <%= raw SITE[:background] %>;
+    }
+    .site-header{
+        background: <%= raw SITE[:header_background] %>;
+    }
+    .site-header h1, .site-header h2{
+        color: <%= raw SITE[:header_font] %> !important;
+    }
+  </style>
 </head>
 <body>
     <div class="container">
