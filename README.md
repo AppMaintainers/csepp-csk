@@ -7,3 +7,5 @@ Hibak:
 - seed adat letisztitasa, torles elso lepeskent, kepek is kellenek hozza
 - abszoluuut URL modelben tarolva!!!!!!
 - ruby hash egysegesen
+- <% unless @content.blank? %> ez mit vizsgal?
+- attachment image is not plural

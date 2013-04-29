@@ -1,4 +1,5 @@
 SITE = {
     title: "Juhasz Ibolya gyogypedagogus",
-    blogname: "Blog"
+    subtitle: "Juhasz Ibolya gyogypedagogus",
+    blogname: "Irasok"
 }

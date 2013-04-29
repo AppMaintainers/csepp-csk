@@ -6,14 +6,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div id="navigation">
-        <%= render partial: "shared/navigation" %>
-    </div>
-
     <div class="container">
-        <%= yield %>
+      <div class="row">
+        <div class="site-header span12">
+          <h1><%= SITE[:title] %></h1>
+          <h2><%= SITE[:subtitle] %></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <%= render partial: "shared/navigation" %>
+        </div>
+        <div class="span8">
+          <div class="content">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     </div>
-
     <%= javascript_include_tag "application" %>
 </body>
 </html>

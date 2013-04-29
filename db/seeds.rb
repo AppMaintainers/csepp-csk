@@ -1,6 +1,11 @@
 Page.destroy_all
 BlogPost.destroy_all
 Menu.destroy_all
+User.destroy_all
+
+user = User.new(email: 'csepp@csepp.hu', password: '12345678', password_confirmation: '12345678')
+user.skip_confirmation!
+user.save!
 
 sample_text = <<eos
 <p>
@@ -10,17 +15,18 @@ eos
 
 sample_images = %w"image_1.jpg image_2.jpg"
 
-sample_documents = %w"attachment.txt"
-
 15.times do |num|
   blog_post = BlogPost.create(
       title: "Blog Post #{ num }",
       body: sample_text * rand( 1..3 )
   )
 
-  ( sample_images * 2 ).shuffle.each do |image|
+  ( sample_images * 4 ).shuffle.each do |image|
     blog_post.attached_pictures.create(
-        pictures: File.open( Rails.root.join('db',image) )
+        picture: File.open( Rails.root.join('db',image) )
+    )
+    blog_post.attached_documents.create(
+        document: File.open( Rails.root.join('db',image) )
     )
   end
 end
@@ -31,9 +37,14 @@ end
       body: sample_text * rand( 1..3 )
   )
 
-  ( sample_images * 2 ).shuffle.each do |image|
+  ( sample_images * 10 ).shuffle.each do |image|
     page.attached_pictures.create(
-        pictures: File.open( Rails.root.join('db',image) )
+        picture: File.open( Rails.root.join('db',image) )
+    )
+  end
+  ( sample_images * 2 ).shuffle.each do |image|
+    page.attached_documents.create(
+        document: File.open( Rails.root.join('db',image) )
     )
   end
 end

@@ -8,5 +8,4 @@ class PagesController < ApplicationController
   def index
     @blogposts = BlogPost.paginate(:page => params[:page], :per_page => 5)
   end
-
 end

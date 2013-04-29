@@ -1,13 +1,31 @@
-<% unless @content.blank? %>
-    <h2><%= @content.title %></h2>
-    <%= raw @content.body %>
-    <i><%= @content.updated_at %></i>
-    <div id="gallery">
-      <% @content.attached_pictures.each do |pic| %>
-          <%= link_to image_tag(pic.pictures.url(:thumb)), pic.pictures.url  %>
-      <% end %>
-    </div>
+<h2><%= @content.title %></h2>
+
+<div class="wyswyg-content">
+  <%= raw @content.body %>
+</div>
+
+<div>
+  <small><%= l(@content.updated_at, format: :long) %></small>
+</div>
+
+<br>
+
+<h4><%= t('.documents-images') %></h4>
+<table class="table table-condensed _table-bordered table-hover">
     <% @content.attached_documents.each do |doc| %>
-        <%= link_to doc.documents_file_name, doc.documents.url  %>
+      <tr>
+        <td><i class="icon-file"></i> <%= link_to "#{doc.document_file_name}", doc.document.url, target: "_blank" %></td>
+        <td class="span3"><%= l(doc.document_updated_at, format: :long) %></td>
+      </tr>
     <% end %>
-<% end %>
+</table>
+
+<div class="gallery">
+  <ul class="thumbnails">
+    <% @content.attached_pictures.each_with_index do |pic,index| %>
+        <li class="<%= index == 0 ? "span2" : "span1" %>">
+            <%= link_to image_tag(pic.picture.url(:thumb)), pic.picture.url, target: "_blank", class: "thumbnail" %>
+        </li>
+    <% end %>
+  </ul>
+</div>

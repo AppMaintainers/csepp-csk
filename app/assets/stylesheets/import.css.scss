@@ -1,1 +1,18 @@
 @import "bootstrap";
+
+.container{
+  background: #ffffff;
+
+  .site-header{
+    padding: 2em;
+    h2{
+      font-size: 1em;
+      line-height: 0;
+    }
+  }
+  .content{
+  }
+  .wyswyg-content{
+    text-align: justify;
+  }
+}

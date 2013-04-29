@@ -1,4 +1,8 @@
-<ul>
+<%
+  @top_page_items ||= []
+  @other_links ||= []
+%>
+<ul class="nav nav-tabs nav-stacked">
   <% @top_page_items.each do | item | %>
       <li><%= link_to(item[:name], item[:url]) %></li>
       <% unless item.children.empty? %>

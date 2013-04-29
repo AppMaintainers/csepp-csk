@@ -5,14 +5,14 @@ class AttachedDocument
   belongs_to :page
   belongs_to :blog_post
 
-  has_mongoid_attached_file :documents
+  has_mongoid_attached_file :document
 
   rails_admin do
     visible false
     list do
     end
     edit do
-      field :documents
+      field :document
     end
   end
 end

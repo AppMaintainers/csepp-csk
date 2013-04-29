@@ -1,4 +1,4 @@
-<%= link_to "RSS Feed", blogposts_url(:rss) %>
+<%= link_to "RSS Feed", blog_url(:rss) %>
 
 <% @blogposts.each do |blogpost| %>
     <h2><%= link_to blogpost.title, blogpost.menu.url %></h2>
