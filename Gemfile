@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby "2.0.0"
+ruby "1.9.3"
 
 gem 'rails'
 
@@ -10,7 +10,7 @@ gem 'mongoid_slug'
 
 gem 'devise'
 gem 'rails_admin'
-gem 'rich'
+#gem 'rich'
 gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'bcrypt-ruby'
 
@@ -33,6 +33,11 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'quiet_assets'
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'newrelic_rpm'
 end
 
 #group :test do

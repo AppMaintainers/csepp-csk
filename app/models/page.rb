@@ -11,7 +11,7 @@ class Page < Content
     end
     edit do
       field :title
-      field :body, :rich_editor
+      field :body #, :rich_editor
       field :attached_documents
       field :attached_pictures
     end
