@@ -1,1 +1,1 @@
-rvm use  1.9.3-p327@csepp-csk --install --create
+rvm use 2.0.0 --install
