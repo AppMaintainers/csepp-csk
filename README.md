@@ -10,4 +10,6 @@ Hibak:
 - <% unless @content.blank? %> ez mit vizsgal?
 - attachment image is not plural
 - gem 'quiet_assets'
+- updated_at, created_at for content
+- image/file serving at production!!!
 

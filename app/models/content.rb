@@ -1,5 +1,6 @@
 class Content
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Mongoid::Slug
   include Mongoid::Userstamp
 
