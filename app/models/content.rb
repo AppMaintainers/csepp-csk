@@ -19,7 +19,7 @@ class Content
     end
     edit do
       field :title
-      field :body, :rich_editor
+      field :body #, :rich_editor
       field :_slugs
     end
   end
