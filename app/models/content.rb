@@ -7,6 +7,8 @@ class Content
 
   field :title, type: String
   field :body, type: String, default: ""
+  field :updated_at, type: Time
+  field :created_at, type: Time
   slug :title, history: true
 
   validates :title, presence: true
