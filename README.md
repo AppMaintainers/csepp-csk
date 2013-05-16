@@ -12,4 +12,5 @@ Hibak:
 - gem 'quiet_assets'
 - updated_at, created_at for content
 - image/file serving at production!!!
+- mongoid paperclip dont upload/serve files out of the box
 
