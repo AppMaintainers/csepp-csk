@@ -102,13 +102,9 @@ GEM
       tzinfo (~> 0.3.22)
     mongoid-paperclip (0.0.8)
       paperclip (>= 2.3.6)
-    mongoid-tree (1.0.1)
-      mongoid (>= 3.0, <= 4.0)
     mongoid_slug (3.1.1)
       mongoid (> 3.0)
       stringex (~> 1.4)
-    mongoid_userstamp (0.2.1)
-      mongoid (>= 3.0.4)
     moped (1.4.5)
     multi_json (1.7.2)
     nested_form (0.3.2)
@@ -220,9 +216,7 @@ DEPENDENCIES
   meta_request
   mongoid
   mongoid-paperclip
-  mongoid-tree
   mongoid_slug
-  mongoid_userstamp
   newrelic_rpm
   quiet_assets
   rails

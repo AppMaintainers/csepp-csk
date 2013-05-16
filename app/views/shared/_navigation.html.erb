@@ -1,22 +1,8 @@
-<%
-  @top_page_items ||= []
-  @other_links ||= []
-%>
 <ul class="nav nav-tabs nav-stacked">
-  <% @top_page_items.each do | item | %>
-      <li><%= link_to(item[:name], item[:url]) %></li>
-      <% unless item.children.empty? %>
-          <ul>
-            <% item.children.each do |sub_item| %>
-                <li><%= link_to(sub_item[:name], sub_item[:url]) %></li>
-            <% end %>
-          </ul>
-      <% end %>
+  <% Page.all.each do | page | %>
+      <li><%= link_to(page.title, page_show_path(page)) %></li>
   <% end %>
-  <% @other_links.each do |item| %>
-      <li><%= link_to(item[:name], item[:url]) %></li>
-  <% end %>
-  <% unless @blog.nil? %>
-    <li><%= link_to(@blog[:name], @blog[:url]) %></li>
+  <% if BlogPost.count > 0 %>
+    <li><%= link_to(SITE[:blogname], blog_path) %></li>
   <% end %>
 </ul>

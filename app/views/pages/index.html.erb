@@ -1,7 +1,7 @@
 <%= link_to "RSS Feed", blog_url(:rss) %>
 
 <% @blogposts.each do |blogpost| %>
-    <h2><%= link_to blogpost.title, blogpost.menu.url %></h2>
+    <h2><%= link_to blogpost.title, page_show_path(blogpost) %></h2>
     <%= raw blogpost.body %>
     <i><%= blogpost.updated_at %></i>
 <% end %>

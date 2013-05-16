@@ -1,6 +1,5 @@
 class User
   include Mongoid::Document
-  include Mongoid::Userstamp
 
   attr_protected :admin
 

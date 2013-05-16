@@ -1,6 +1,5 @@
 Page.destroy_all
 BlogPost.destroy_all
-Menu.destroy_all
 User.destroy_all
 
 user = User.new(email: 'csepp@csepp.hu', password: '12345678', password_confirmation: '12345678')
@@ -15,7 +14,7 @@ eos
 
 sample_images = %w"image_1.jpg image_2.jpg"
 
-15.times do |num|
+10.times do |num|
   blog_post = BlogPost.create(
       title: "Blog Post #{ num }",
       body: sample_text * rand( 1..3 )
@@ -31,7 +30,7 @@ sample_images = %w"image_1.jpg image_2.jpg"
   end
 end
 
-5.times do |num|
+4.times do |num|
   page = Page.create(
       title: "Page #{ num }",
       body: sample_text * rand( 1..3 )
@@ -47,12 +46,4 @@ end
         document: File.open( Rails.root.join('db',image) )
     )
   end
-end
-
-Page.all.to_a.each do |page|
-  Menu.create( content: page )
-end
-
-BlogPost.all.to_a.each do |blog_post|
-  Menu.create( content: blog_post )
 end

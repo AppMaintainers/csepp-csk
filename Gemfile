@@ -5,13 +5,13 @@ gem 'rails'
 
 gem 'mongoid'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'mongoid_userstamp'
+#gem 'mongoid_userstamp'
 gem 'mongoid_slug'
 
 gem 'devise'
 gem 'rails_admin'
 #gem 'rich'
-gem 'mongoid-tree', :require => 'mongoid/tree'
+#gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'bcrypt-ruby'
 
 gem 'will_paginate'
