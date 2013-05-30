@@ -5,11 +5,14 @@ gem 'rails'
 
 gem 'mongoid'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk'
+#gem 'paperclip-gridfs', require: 'paperclip-gridfs'
 #gem 'mongoid_userstamp'
 gem 'mongoid_slug'
 
 gem 'devise'
 gem 'rails_admin'
+gem 'tinymce-rails'
 #gem 'rich'
 #gem 'mongoid-tree', :require => 'mongoid/tree'
 gem 'bcrypt-ruby'

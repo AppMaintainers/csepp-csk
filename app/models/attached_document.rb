@@ -5,7 +5,7 @@ class AttachedDocument
   belongs_to :page
   belongs_to :blog_post
 
-  has_mongoid_attached_file :document
+  has_mongoid_attached_file :document, PAPERCLIP_OPTIONS
 
   rails_admin do
     visible false

@@ -25,8 +25,9 @@ class Page
     end
     edit do
       field :title
-      field :body #, :rich_editor
-      field :_slugs
+      field :body do
+        html_attributes style: 'height: 20em; width: 90%;'
+      end
       field :attached_documents
       field :attached_pictures
     end
