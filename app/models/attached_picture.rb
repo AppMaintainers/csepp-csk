@@ -1,12 +1,11 @@
 class AttachedPicture
   include Mongoid::Document
-  include Mongoid::Paperclip
+  include Mongoid::Timestamps
 
   belongs_to :page
   belongs_to :blog_post
 
-  has_mongoid_attached_file :picture,
-    PAPERCLIP_OPTIONS.merge!({styles: { big: "1000x1000>", medium: "300x300>", thumb: "140x140#" }})
+  mount_uploader :picture, PictureUploader
 
   rails_admin do
     visible false

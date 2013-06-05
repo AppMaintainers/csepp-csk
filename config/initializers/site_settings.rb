@@ -9,11 +9,6 @@ SITE = {
     header_font: "#fff"
 }
 
-PAPERCLIP_OPTIONS = !Rails.env.production? ? {} : {
-    :storage => :s3,
-    :bucket => ENV['AWS_BUCKET'],
-    :s3_credentials => {
-        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-}
+CarrierWave.configure do |config|
+  config.storage = :grid_fs
+end

@@ -11,5 +11,9 @@ CseppCsk::Application.routes.draw do
   match "blog" => "pages#index"
   match ":title" => "pages#show", as: "page_show"
 
+  resources :pages do
+    get :document, on: :member
+  end
+
   root :to => "pages#show"
 end

@@ -1,11 +1,11 @@
 class AttachedDocument
   include Mongoid::Document
-  include Mongoid::Paperclip
+  include Mongoid::Timestamps
 
   belongs_to :page
   belongs_to :blog_post
 
-  has_mongoid_attached_file :document, PAPERCLIP_OPTIONS
+  mount_uploader :document, DocumentUploader
 
   rails_admin do
     visible false
