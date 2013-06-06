@@ -14,8 +14,8 @@
 <table class="table table-condensed _table-bordered table-hover">
     <% @content.attached_documents.each do |doc| %>
       <tr>
-        <td><i class="icon-file"></i> <%= link_to "#{doc.document_file_name}", doc.document.url, target: "_blank" %></td>
-        <td class="span3"><%= l(doc.document_updated_at, format: :long) %></td>
+        <td><i class="icon-file"></i> <%= link_to File.basename(doc.document.url), doc.document.url, target: "_blank" %></td>
+        <td class="span3"><%= l(doc.updated_at, format: :long) %></td>
       </tr>
     <% end %>
 </table>
@@ -24,7 +24,7 @@
   <ul class="thumbnails">
     <% @content.attached_pictures.each_with_index do |pic,index| %>
         <li class="<%= index == 0 ? "span2" : "span1" %>">
-            <%= link_to image_tag(pic.picture.url(:thumb)), pic.picture.url, target: "_blank", class: "thumbnail" %>
+            <%= link_to image_tag(pic.picture.url + '?version=thumb'), pic.picture.url, target: "_blank", class: "thumbnail" %>
         </li>
     <% end %>
   </ul>

@@ -1,6 +1,8 @@
 Page.destroy_all
 BlogPost.destroy_all
 User.destroy_all
+AttachedPicture.destroy_all
+AttachedDocument.destroy_all
 
 user = User.new(email: 'csepp@csepp.hu', password: '12345678', password_confirmation: '12345678')
 user.skip_confirmation!

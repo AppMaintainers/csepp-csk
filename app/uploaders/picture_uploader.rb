@@ -8,7 +8,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "#{model.class.to_s.underscore}/#{model.id}"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

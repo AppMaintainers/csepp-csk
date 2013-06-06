@@ -15,5 +15,7 @@ CseppCsk::Application.routes.draw do
     get :document, on: :member
   end
 
+  match 'assets/:model/:id/:filename' => 'assets#show'
+
   root :to => "pages#show"
 end
