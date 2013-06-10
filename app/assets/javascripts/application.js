@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require picbox
 //= require_tree .
+//= require_self
+

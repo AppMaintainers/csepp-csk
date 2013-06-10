@@ -24,7 +24,7 @@
   <ul class="thumbnails">
     <% @content.attached_pictures.each_with_index do |pic,index| %>
         <li class="<%= index == 0 ? "span2" : "span1" %>">
-            <%= link_to image_tag(pic.picture.url + '?version=thumb'), pic.picture.url, target: "_blank", class: "thumbnail" %>
+            <%= link_to image_tag(pic.picture.url + '?version=thumb'), pic.picture.url, target: "_blank", class: "thumbnail", rel: "lightbox-group1" %>
         </li>
     <% end %>
   </ul>
