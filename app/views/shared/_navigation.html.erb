@@ -1,8 +1,15 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <% Page.all.each do | page | %>
+          <li><%= link_to(page.title, page_show_path(page)) %></li>
+      <% end %>
+      <% if BlogPost.count > 0 %>
+          <li><%= link_to(setting[:blogname], blog_path) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
 <ul class="nav nav-tabs nav-stacked">
-  <% Page.all.each do | page | %>
-      <li><%= link_to(page.title, page_show_path(page)) %></li>
-  <% end %>
-  <% if BlogPost.count > 0 %>
-    <li><%= link_to(SITE[:blogname], blog_path) %></li>
-  <% end %>
 </ul>

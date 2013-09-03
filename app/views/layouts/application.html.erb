@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= SITE[:title] %></title>
+  <title><%= setting[:title] %></title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <style>
     body{
-        background: <%= raw SITE[:background] %>;
+        background: <%= raw setting[:background] %>;
     }
     .site-header{
-        background: <%= raw SITE[:header_background] %>;
+        background: <%= raw setting[:header_background] %>;
     }
     .site-header h1, .site-header h2{
-        color: <%= raw SITE[:header_font] %> !important;
+        color: <%= raw setting[:header_font] %> !important;
     }
   </style>
 </head>
 <body>
     <div class="container">
+
       <div class="row">
         <div class="site-header span12">
-          <h1><%= SITE[:title] %></h1>
-          <h2><%= SITE[:subtitle] %></h2>
+          <h1><%= setting[:title] %></h1>
+          <h2><%= setting[:subtitle] %></h2>
         </div>
       </div>
+
       <div class="row">
-        <div class="span4">
           <%= render partial: "shared/navigation" %>
-        </div>
-        <div class="span8">
+      </div>
+
+      <div class="row">
           <div class="content">
             <%= yield %>
           </div>
-        </div>
       </div>
     </div>
     <%= javascript_include_tag "application" %>
+    <%= javascript_tag do %>
+    $.backstretch([
+        "http://dl.dropbox.com/u/515046/www/outside.jpg"
+         , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+        , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
+        ], {duration: 3000, fade: 750});
+    <% end %>
 </body>
 </html>
