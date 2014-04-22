@@ -18,11 +18,26 @@
     }
   }
   .content{
+    padding-right: 2.7em;
     h2:first-child{
       margin-top: 0;
     }
   }
   .wyswyg-content{
     text-align: justify;
+  }
+
+  ul{
+    a{
+      font-weight:bold;
+      color: #B56149;
+    }
+    padding-left: 2.7em;
+    .child{
+      a{
+        font-weight:normal;
+        padding-left: 2em;
+      }
+    }
   }
 }
