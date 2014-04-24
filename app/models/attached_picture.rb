@@ -7,6 +7,10 @@ class AttachedPicture
 
   mount_uploader :picture, PictureUploader
 
+  after_save do
+    destroy if picture.blank?
+  end
+
   rails_admin do
     visible false
     list do

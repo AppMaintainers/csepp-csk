@@ -7,6 +7,10 @@ class AttachedDocument
 
   mount_uploader :document, DocumentUploader
 
+  after_save do
+    destroy if document.blank?
+  end
+
   rails_admin do
     visible false
     list do
