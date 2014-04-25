@@ -23,10 +23,14 @@
 
 jQuery(function() {
     jQuery('textarea').tinymce({});
-    alert('TINY');
 });
 
 $(document).on('pjax:end', function (t) {
    jQuery('textarea').tinymce({});
-   alert('PJAX');
-})
+});
+
+$(document).on('pjax:start', function (t) {
+	if ($('textarea').length > 0) {
+		$('textarea').tinymce().destroy();
+	}
+});
