@@ -115,8 +115,11 @@
       display: block;
     }
     .sidebar-nav .navbar li a {
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
+    }
+    .navbar-nav {
+      clear: both;
     }
   }
 
@@ -149,8 +152,6 @@
       display: block;
     }
 
-
-
     .navbar-left,.navbar-right {
       float: none !important;
     }
@@ -169,8 +170,8 @@
     }
 
     .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
     }
     .collapse.in{
       display:block !important;
