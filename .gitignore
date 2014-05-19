@@ -31,3 +31,5 @@ pickle-email-*.html
 .idea/
 tags
 .DS_Store
+.vagrant
+.vagrant/*

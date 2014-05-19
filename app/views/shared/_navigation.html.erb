@@ -1,15 +1,31 @@
-<div class="navbar">
-  <div class="navbar-inner">
-    <ul class="nav">
-      <% Page.all.each do | page | %>
-          <li><%= link_to(page.title, page_show_path(page)) %></li>
-      <% end %>
-      <% if BlogPost.count > 0 %>
-          <li><%= link_to(setting[:blogname], blog_path) %></li>
-      <% end %>
-    </ul>
+<ul class="nav nav-pills nav-stacked">
+  <div class="row">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">Tartalom</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <div class="nav navbar-nav">
+            <% @nav_pages.each do | page | %>
+              <li><%= link_to(page.title, page_show_path(page)) %>
+                <% page.children.each do | child_page | %>
+                  <li class="child"><%= link_to('- ' + child_page.title, page_show_path(child_page)) %></li>
+                   <% end %>
+                </li>
+            <% end %>
+            <% if BlogPost.count > 0 %>
+              <li><%= link_to(SITE[:blogname], blog_path) %></li>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
-<ul class="nav nav-tabs nav-stacked">
 </ul>

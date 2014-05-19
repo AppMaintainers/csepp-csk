@@ -3,7 +3,7 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title "Blog posts"
     xml.description "Lots of blog posts"
-    xml.link blogposts_url(:rss)
+    xml.link blog_url(:rss)
 
     for blogpost in @blogposts
       xml.item do

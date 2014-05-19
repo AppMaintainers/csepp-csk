@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= setting[:title] %></title>
+  <title><%= SITE[:title] %></title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  
+  <%= javascript_include_tag "application" %>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <style>
@@ -18,25 +28,24 @@
 </head>
 <body>
     <div class="container">
-
       <div class="row">
-        <div class="site-header span12">
-          <h1><%= setting[:title] %></h1>
-          <h2><%= setting[:subtitle] %></h2>
+        <div class="site-header col-md-12">
+          <h1><%= SITE[:title] %></h1>
+          <h2><%= SITE[:subtitle] %></h2>
         </div>
       </div>
 
       <div class="row">
+        <div class="col-md-4">
           <%= render partial: "shared/navigation" %>
-      </div>
-
-      <div class="row">
+        </div>
+        <div class="col-md-8">
           <div class="content">
             <%= yield %>
           </div>
       </div>
     </div>
-    <%= javascript_include_tag "application" %>
+
     <%= javascript_tag do %>
     $.backstretch([
         "http://dl.dropbox.com/u/515046/www/outside.jpg"

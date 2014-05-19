@@ -22,8 +22,15 @@
 //=  require 'tinymce-jquery'
 
 jQuery(function() {
-    jQuery('textarea').tinymce({
-        theme: 'simple'
-        //,toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link"
-    });
+    jQuery('textarea').tinymce({});
+});
+
+$(document).on('pjax:end', function (t) {
+   jQuery('textarea').tinymce({});
+});
+
+$(document).on('pjax:start', function (t) {
+	if ($('textarea').length > 0) {
+		$('textarea').tinymce().destroy();
+	}
 });

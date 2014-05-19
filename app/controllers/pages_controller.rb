@@ -23,6 +23,4 @@ class PagesController < ApplicationController
     end
     content ||= BlogPost.find(slug)
   end
-
 end
-

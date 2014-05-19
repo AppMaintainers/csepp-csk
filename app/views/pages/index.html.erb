@@ -1,9 +1,11 @@
-<%= link_to "RSS Feed", blog_url(:rss) %>
+<%# link_to "RSS Feed", blog_url(:rss) %>
 
 <% @blogposts.each do |blogpost| %>
-    <h2><%= link_to blogpost.title, page_show_path(blogpost) %></h2>
-    <%= raw blogpost.body %>
-    <i><%= blogpost.updated_at %></i>
+	<div class="blogpost">
+	    <h2><%= link_to blogpost.title, page_show_path(blogpost) %></h2>
+	    <%= raw blogpost.body %>
+	    <i class="date"><%= l(blogpost.updated_at, format: :long) %></i>
+    </div>
 <% end %>
 
 <%= will_paginate @blogposts %>
