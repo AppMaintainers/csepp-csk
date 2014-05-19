@@ -16,13 +16,13 @@
   <%= csrf_meta_tags %>
   <style>
     body{
-        background: <%= raw setting[:background] %>;
+        background: <%= raw SITE[:background] %>;
     }
     .site-header{
-        background: <%= raw setting[:header_background] %>;
+        background: <%= raw SITE[:header_background] %>;
     }
     .site-header h1, .site-header h2{
-        color: <%= raw setting[:header_font] %> !important;
+        color: <%= raw SITE[:header_font] %> !important;
     }
   </style>
 </head>
@@ -46,12 +46,14 @@
       </div>
     </div>
 
-    <%= javascript_tag do %>
-    $.backstretch([
-        "http://dl.dropbox.com/u/515046/www/outside.jpg"
-         , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
-        , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
-        ], {duration: 3000, fade: 750});
+    <% if false %>
+      <%= javascript_tag do %>
+      $.backstretch([
+          "http://dl.dropbox.com/u/515046/www/outside.jpg"
+           , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+          , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
+          ], {duration: 3000, fade: 750});
+      <% end %>
     <% end %>
 </body>
 </html>
