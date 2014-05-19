@@ -2,6 +2,15 @@
 <html>
 <head>
   <title><%= SITE[:title] %></title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <%= javascript_include_tag "application" %>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <style>
@@ -19,16 +28,16 @@
 <body>
     <div class="container">
       <div class="row">
-        <div class="site-header span12">
+        <div class="site-header col-md-12">
           <h1><%= SITE[:title] %></h1>
           <h2><%= SITE[:subtitle] %></h2>
         </div>
       </div>
       <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
           <%= render partial: "shared/navigation" %>
         </div>
-        <div class="span8">
+        <div class="col-md-8">
           <div class="content">
             <%= yield %>
           </div>
