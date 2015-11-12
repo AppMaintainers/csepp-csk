@@ -1,3 +1,9 @@
+production:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      uri: <%= ENV['MONGOLAB_URI_OLD'] %>
 development:
   # Configure available database clients. (required)
   clients:
