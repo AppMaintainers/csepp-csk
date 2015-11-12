@@ -4,9 +4,12 @@ User.destroy_all
 AttachedPicture.destroy_all
 AttachedDocument.destroy_all
 
-user = User.new(email: 'csepp@csepp.hu', password: '12345678', password_confirmation: '12345678')
+user = User.new(email: 'cms@appmaintainers.com', password: '12345678', password_confirmation: '12345678')
 user.skip_confirmation!
 user.save!
+
+Setting.create!(
+)
 
 sample_text = <<eos
 <p>
