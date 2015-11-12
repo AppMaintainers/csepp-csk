@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-ruby "1.9.3"
+ruby "2.2.2"
 
 gem 'rails', '~> 3.2'
 
-gem 'mongoid'
+gem 'mongoid', '3.1.7'
 gem 'mongoid_slug'
 
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
@@ -28,10 +28,6 @@ group :assets do
 end
 
 group :development do
-  gem 'debugger'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
   gem 'quiet_assets'
 end
 
