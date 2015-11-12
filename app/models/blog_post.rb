@@ -18,7 +18,7 @@ class BlogPost
   validates :title, presence: true, :length => { :minimum => 3 }
   validates :body, presence: true
 
-  default_scope order_by('updated_at DESC')
+  default_scope -> {order_by('updated_at DESC')}
 
   rails_admin do
     list do

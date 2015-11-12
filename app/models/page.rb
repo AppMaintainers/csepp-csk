@@ -3,7 +3,6 @@ class Page
   include Mongoid::Timestamps
   include Mongoid::Slug
 
-
   has_many :children, :class_name => 'Page', :inverse_of => :parent, :foreign_key => 'parent_id'
   belongs_to :parent, :class_name => 'Page', :inverse_of => :children, :foreign_key => 'parent_id'
 

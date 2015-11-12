@@ -1,8 +1,6 @@
 class User
   include Mongoid::Document
 
-  attr_protected :admin
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable

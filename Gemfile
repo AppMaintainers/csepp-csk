@@ -1,10 +1,13 @@
 source 'http://rubygems.org'
 ruby "2.2.2"
 
-gem 'rails', '~> 3.2'
+gem 'rails'
 
-gem 'mongoid', '3.1.7'
-gem 'mongoid_slug'
+gem 'syck' # hack
+
+gem 'moped'
+gem 'mongoid'
+gem 'mongoid-slug'
 
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mini_magick'
